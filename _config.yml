@@ -94,7 +94,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Deok Yong Kim"
+  name             : "ddange"
   avatar           : "/assets/images/MyThumbnail.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I Love U"
   location         : "South Korea"
@@ -173,6 +173,8 @@ exclude:
   - tmp
   - /docs # ignore Minimal Mistakes /docs
   - /test # ignore Minimal Mistakes /test
+  - /_site
+  
 keep_files:
   - .git
   - .svn
