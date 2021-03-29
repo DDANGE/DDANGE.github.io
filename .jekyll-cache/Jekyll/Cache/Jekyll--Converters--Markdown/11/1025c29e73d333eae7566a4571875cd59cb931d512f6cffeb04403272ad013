@@ -1,0 +1,110 @@
+I"-<h1 id="깃허브-페이지-시작">깃허브 페이지 시작</h1>
+
+<p><!-- 큰제목 밑에 =====헤더 타이틀 -->
+깃허브에 익숙해지기 위해 블로그도 이사를 하게 됐다.</p>
+
+<h1 id="깃허브를-사용하면서">깃허브를 사용하면서…</h1>
+
+<p>네이버블로그를 쓰던 나는 소스코드를 남기는게 많이 불편했다.<br />
+깃페이지는 아래처럼 <strong>마크다운</strong> 문법에 따라 키워드만 입력해주면 코드를 보기쉽게 포스팅 할 수 있었다.</p>
+
+<p><strong>c#언어 코드 테스트</strong></p>
+<div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  
+<span class="k">using</span> <span class="nn">MysticManaCommon</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">MysticManaCommon.ContentBase</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">UnityEngine</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">UnityEngine.Networking</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">UnityEngine.UI</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">static</span> <span class="n">UIQuestList</span><span class="p">;</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">UIQuestBox</span> <span class="p">:</span> <span class="n">UIControl</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">const</span> <span class="kt">string</span> <span class="n">PrefabPath</span> <span class="p">=</span> <span class="s">"UIQuestBox"</span><span class="p">;</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="n">UIQuestBox</span> <span class="nf">Create</span><span class="p">(</span><span class="kt">int</span> <span class="n">top</span> <span class="p">=</span> <span class="m">320</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">singleton</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">Transform</span> <span class="n">parent</span> <span class="p">=</span> <span class="nf">FindBottomParent</span><span class="p">();</span>
+            <span class="n">GameObject</span> <span class="n">go</span> <span class="p">=</span> <span class="nf">Instantiate</span><span class="p">(</span><span class="n">MtAssetBundles</span><span class="p">.</span><span class="nf">Load</span><span class="p">(</span><span class="s">"prefab/ui/quest/"</span> <span class="p">+</span> <span class="n">PrefabPath</span><span class="p">))</span> <span class="k">as</span> <span class="n">GameObject</span><span class="p">;</span>
+
+            <span class="n">singleton</span> <span class="p">=</span> <span class="n">Create</span><span class="p">&lt;</span><span class="n">UIQuestBox</span><span class="p">&gt;(</span><span class="n">go</span><span class="p">,</span> <span class="n">parent</span><span class="p">);</span>
+            <span class="n">singleton</span><span class="p">.</span><span class="nf">InitializeOnce</span><span class="p">();</span>
+        <span class="p">}</span>
+
+        <span class="n">singleton</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="nf">SetParent</span><span class="p">(</span><span class="n">UIKingdomInfo</span><span class="p">.</span><span class="nf">Get</span><span class="p">().</span><span class="n">uiQuestBoxParentTrs</span><span class="p">);</span>
+
+        <span class="n">RectTransform</span> <span class="n">rect</span> <span class="p">=</span> <span class="n">singleton</span><span class="p">.</span><span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">RectTransform</span><span class="p">&gt;();</span>
+        <span class="n">rect</span><span class="p">.</span><span class="n">anchoredPosition</span> <span class="p">=</span> <span class="n">Vector2</span><span class="p">.</span><span class="n">zero</span><span class="p">;</span><span class="c1">//new Vector2(10, top);</span>
+        <span class="n">singleton</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="nf">SetAsFirstSibling</span><span class="p">();</span>
+
+        <span class="c1">//singleton.transform.SetParent(FindHeaderParent());</span>
+
+        <span class="c1">//singleton.questList = AccountInfo.instance.questList;</span>
+
+        <span class="k">return</span> <span class="n">singleton</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">class</span> <span class="nc">QuestIDXComparer</span> <span class="p">:</span> <span class="n">IComparer</span><span class="p">,</span> <span class="n">IComparer</span><span class="p">&lt;</span><span class="n">MtQuest</span><span class="p">&gt;</span>
+    <span class="p">{</span>
+        <span class="k">public</span> <span class="kt">int</span> <span class="nf">Compare</span><span class="p">(</span><span class="n">MtQuest</span> <span class="n">x</span><span class="p">,</span> <span class="n">MtQuest</span> <span class="n">y</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">return</span> <span class="n">x</span><span class="p">.</span><span class="n">IDX</span><span class="p">.</span><span class="nf">CompareTo</span><span class="p">(</span><span class="n">y</span><span class="p">.</span><span class="n">IDX</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="k">public</span> <span class="kt">int</span> <span class="nf">Compare</span><span class="p">(</span><span class="kt">object</span> <span class="n">x</span><span class="p">,</span> <span class="kt">object</span> <span class="n">y</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">return</span> <span class="nf">Compare</span><span class="p">((</span><span class="n">MtQuest</span><span class="p">)</span><span class="n">x</span><span class="p">,</span> <span class="p">(</span><span class="n">MtQuest</span><span class="p">)</span><span class="n">y</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">private</span> <span class="k">static</span> <span class="n">UIQuestBox</span> <span class="n">singleton</span><span class="p">;</span>
+
+    <span class="c1">//PlayerPref에 저장해둘 리스트</span>
+    <span class="k">private</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="n">visibleQuestList</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
+    <span class="c1">//AccountInfo에서 받아온 보유중인 퀘스트리스트</span>
+    <span class="k">private</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="n">MtQuest</span><span class="p">&gt;</span> <span class="n">myQuestDic</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="n">MtQuest</span><span class="p">&gt;();</span>
+    <span class="c1">//필드정보창에 보여줄 퀘스트 리스트</span>
+    <span class="k">private</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="n">MtQuest</span><span class="p">&gt;</span> <span class="n">visibleQuestDic</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="n">MtQuest</span><span class="p">&gt;();</span>
+
+    <span class="c1">// 손가락으로 가르킴이 예약된 퀘스트 IDX</span>
+    <span class="k">private</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="n">pointingReserved</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;();</span>
+
+    <span class="k">public</span> <span class="n">Transform</span> <span class="n">gridParent</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
+
+    <span class="p">[</span><span class="n">SerializeField</span><span class="p">]</span> <span class="k">private</span> <span class="n">Image</span> <span class="n">backPanelImg</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
+    <span class="p">[</span><span class="n">SerializeField</span><span class="p">]</span> <span class="k">private</span> <span class="n">Animator</span> <span class="n">questBoxAnimator</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
+
+    <span class="p">[</span><span class="n">SerializeField</span><span class="p">]</span> <span class="k">private</span> <span class="n">GameObject</span> <span class="n">zoomButton</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
+    <span class="p">[</span><span class="n">SerializeField</span><span class="p">]</span> <span class="k">private</span> <span class="n">Transform</span> <span class="n">uiArrowCollidie</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
+
+    <span class="k">private</span> <span class="kt">int</span> <span class="n">traceSubQuestIDX</span> <span class="p">=</span> <span class="p">-</span><span class="m">1</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="k">static</span> <span class="n">UIQuestBox</span> <span class="nf">Get</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">singleton</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">private</span> <span class="k">void</span> <span class="nf">InitializeOnce</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="nf">ExtractVisibleQuestFromAcceptedQuests</span><span class="p">();</span>
+        <span class="nf">Refresh</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p><strong>c언어 코드 테스트</strong></p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">printf</span><span class="p">(</span><span class="s">"C언어 코드 테스트"</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>이직을 준비하고 있는 시점에 개발환경을 조금 바꿔보려 M1맥북을 사들이고<br />
+이리 삽질 저리 삽질 +_+ 하며 깃허브페이즈를 구축하느라 혼났다.</p>
+
+<h1 id="마무리">마무리</h1>
+<p>고생하고 노력한만큼 성취감과 만족감은 크다.
+ 이제 꾸준하게 로그를 남겨야겠다.</p>
+
+<!--
+<center><img src="https://user-images.githubusercontent.com/39215290/112190663-9200ec00-8c48-11eb-9884-449196d888e9.png" width="100%" height="100%"></center>
+-->
+:ET
