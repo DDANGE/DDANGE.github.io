@@ -1,12 +1,14 @@
-I"Ê
+I"9
 
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         
+          <a class="site-logo" href="/"><img src="/assets/images/Panda.png" alt="DDANG's Home"></a>
+        
         <a class="site-title" href="/">
-          Site Title
+          DDANG's Home
           
         </a>
         <ul class="visible-links"><li class="masthead__menu-item">

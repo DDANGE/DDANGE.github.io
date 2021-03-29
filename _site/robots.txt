@@ -1,1 +1,1 @@
-Sitemap: /sitemap.xml
+Sitemap: https://ddange.github.io/sitemap.xml
