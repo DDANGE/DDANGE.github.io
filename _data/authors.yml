@@ -1,0 +1,15 @@
+ddange:
+  name        : "Deok Yong Kim"
+  bio         : "I Love U"
+  avatar      : "/assets/images/MyThumbnail.png"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "royalkdy@gmail.com"
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://blog.naver.com/bestdm"
+    #- label: "Twitter"
+    #  icon: "fab fa-fw fa-twitter-square"
+    #  url: "https://twitter.com/extravagantman"
+    
