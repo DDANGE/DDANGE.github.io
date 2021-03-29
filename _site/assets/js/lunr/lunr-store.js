@@ -4,10 +4,4 @@ var store = [{
         "tags": ["Unity"],
         "url": "/unity/testPost/",
         "teaser": null
-      },{
-        "title": "First Post",
-        "excerpt":"First Post  Console.Writeline(\"C# Test\"); public class Test{     private string name; }  ","categories": ["Unity"],
-        "tags": ["Test"],
-        "url": "/unity/firstPost/",
-        "teaser": null
       }]
