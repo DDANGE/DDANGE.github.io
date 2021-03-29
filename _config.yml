@@ -95,10 +95,10 @@ analytics:
 # Site Author
 author:
   name             : "Deok Yong Kim"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/MyThumbnail.jpeg"
   bio              : "Daily Log"
   location         : "South Korea"
-  email            :
+  email            : "royalkdy@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
