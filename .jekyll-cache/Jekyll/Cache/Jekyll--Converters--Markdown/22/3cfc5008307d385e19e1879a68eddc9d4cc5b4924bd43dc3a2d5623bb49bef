@@ -1,0 +1,29 @@
+I";<h1 id="깃허브-페이지-시작">깃허브 페이지 시작</h1>
+<p><!-- 큰제목 밑에 =====헤더 타이틀 -->
+깃허브에 익숙해지기 위해 블로그도 이사를 하게 됐다.</p>
+
+<h1 id="깃허브를-사용하면서">깃허브를 사용하면서…</h1>
+<p>네이버블로그를 쓰던 나는 소스코드를 남기는게 많이 불편했다.<br />
+깃페이지는 아래처럼 <strong>마크다운</strong> 문법에 따라 키워드만 입력해주면 코드를 보기쉽게 포스팅 할 수 있었다.</p>
+
+<p><strong>c#언어 코드 테스트</strong></p>
+<div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"C# 코드 테스트"</span><span class="p">);</span>
+  <span class="k">public</span> <span class="k">class</span> <span class="nc">Test</span>
+  <span class="p">{</span>
+  <span class="p">}</span>
+</code></pre></div></div>
+<p><strong>c언어 코드 테스트</strong></p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">printf</span><span class="p">(</span><span class="s">"C언어 코드 테스트"</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>이직을 준비하고 있는 시점에 개발환경을 조금 바꿔보려 M1맥북을 사들이고<br />
+이리 삽질 저리 삽질 +_+ 하며 깃허브페이즈를 구축하느라 혼났다.</p>
+
+<h1 id="마무리">마무리</h1>
+<p>고생하고 노력한만큼 성취감과 만족감은 크다.
+ 이제 꾸준하게 로그를 남겨야겠다.</p>
+
+<!--
+<center><img src="https://user-images.githubusercontent.com/39215290/112190663-9200ec00-8c48-11eb-9884-449196d888e9.png" width="100%" height="100%"></center>
+-->
+:ET

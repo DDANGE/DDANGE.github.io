@@ -1,16 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://ddange.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ddange.github.io/" rel="alternate" type="text/html" /><updated>2021-03-30T04:59:52+09:00</updated><id>https://ddange.github.io/feed.xml</id><title type="html">땅이네</title><subtitle>Daily Log</subtitle><author><name>ddange</name><email>royalkdy@gmail.com</email></author><entry><title type="html">First Post</title><link href="https://ddange.github.io/unity/firstPost/" rel="alternate" type="text/html" title="First Post" /><published>2021-03-25T07:00:00+09:00</published><updated>2021-03-25T07:00:00+09:00</updated><id>https://ddange.github.io/unity/firstPost</id><content type="html" xml:base="https://ddange.github.io/unity/firstPost/">&lt;h1 id=&quot;first-post&quot;&gt;First Post&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://ddange.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ddange.github.io/" rel="alternate" type="text/html" /><updated>2021-03-30T05:05:00+09:00</updated><id>https://ddange.github.io/feed.xml</id><title type="html">땅이네</title><subtitle>Daily Log</subtitle><author><name>ddange</name><email>royalkdy@gmail.com</email></author><entry><title type="html">First Post</title><link href="https://ddange.github.io/unity/firstPost/" rel="alternate" type="text/html" title="First Post" /><published>2021-03-25T07:00:00+09:00</published><updated>2021-03-25T07:00:00+09:00</updated><id>https://ddange.github.io/unity/firstPost</id><content type="html" xml:base="https://ddange.github.io/unity/firstPost/">&lt;h1 id=&quot;first-post&quot;&gt;First Post&lt;/h1&gt;
 &lt;div class=&quot;language-c# highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;Console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Writeline&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;C# Test&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Deok Yong Kim</name></author><category term="Unity" /><category term="Test" /><summary type="html">First Post Console.Writeline(&quot;C# Test&quot;); public class Test{ private string name; }</summary></entry><entry><title type="html">GitHubPage로 이사</title><link href="https://ddange.github.io/unity/testPost/" rel="alternate" type="text/html" title="GitHubPage로 이사" /><published>2021-03-24T07:00:00+09:00</published><updated>2021-03-24T07:00:00+09:00</updated><id>https://ddange.github.io/unity/testPost</id><content type="html" xml:base="https://ddange.github.io/unity/testPost/">&lt;h1 id=&quot;깃허브-페이지-시작&quot;&gt;깃허브 페이지 시작&lt;/h1&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Deok Yong Kim</name></author><category term="Unity" /><category term="Test" /><summary type="html">First Post Console.Writeline(&quot;C# Test&quot;); public class Test{ private string name; }</summary></entry><entry><title type="html">GitHubPage로 이사</title><link href="https://ddange.github.io/unity/testPost/" rel="alternate" type="text/html" title="GitHubPage로 이사" /><published>2021-03-24T07:00:00+09:00</published><updated>2021-03-24T07:00:00+09:00</updated><id>https://ddange.github.io/unity/testPost</id><content type="html" xml:base="https://ddange.github.io/unity/testPost/">&lt;h1 id=&quot;-깃허브-페이지-시작&quot;&gt;-깃허브 페이지 시작&lt;/h1&gt;
 &lt;p&gt;&lt;!-- 큰제목 밑에 =====헤더 타이틀 --&gt;
 깃허브에 익숙해지기 위해 블로그도 이사를 하게 됐다.&lt;/p&gt;
 
-&lt;p&gt;&amp;lt;/br&amp;gt;
-깃허브를 사용하면서…
-=======
-네이버블로그를 쓰던 나는 소스코드를 남기는게 많이 불편했다.&lt;br /&gt;
+&lt;h1 id=&quot;-깃허브를-사용하면서&quot;&gt;-깃허브를 사용하면서…&lt;/h1&gt;
+
+&lt;p&gt;네이버블로그를 쓰던 나는 소스코드를 남기는게 많이 불편했다.&lt;br /&gt;
 깃페이지는 아래처럼 &lt;strong&gt;마크다운&lt;/strong&gt; 문법에 따라 키워드만 입력해주면 코드를 보기쉽게 포스팅 할 수 있었다.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;c#언어 코드 테스트&lt;/strong&gt;&lt;/p&gt;
@@ -26,12 +25,10 @@
 &lt;p&gt;이직을 준비하고 있는 시점에 개발환경을 조금 바꿔보려 M1맥북을 사들이고&lt;br /&gt;
 이리 삽질 저리 삽질 +_+ 하며 깃허브페이즈를 구축하느라 혼났다.&lt;/p&gt;
 
-&lt;p&gt;&amp;lt;/br&amp;gt; &amp;lt;/br&amp;gt;&amp;lt;/br&amp;gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;마무리&quot;&gt;마무리&lt;/h1&gt;
+&lt;h1 id=&quot;-마무리&quot;&gt;-마무리&lt;/h1&gt;
 &lt;p&gt;고생하고 노력한만큼 성취감과 만족감은 크다.
  이제 꾸준하게 로그를 남겨야겠다.&lt;/p&gt;
 
 &lt;!--
 &lt;center&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/39215290/112190663-9200ec00-8c48-11eb-9884-449196d888e9.png&quot; width=&quot;100%&quot; height=&quot;100%&quot;&gt;&lt;/center&gt;
---&gt;</content><author><name>Deok Yong Kim</name></author><category term="Unity" /><category term="Unity" /><summary type="html">깃허브 페이지 시작 깃허브에 익숙해지기 위해 블로그도 이사를 하게 됐다.</summary></entry></feed>
+--&gt;</content><author><name>Deok Yong Kim</name></author><category term="Unity" /><category term="Unity" /><summary type="html">-깃허브 페이지 시작 깃허브에 익숙해지기 위해 블로그도 이사를 하게 됐다.</summary></entry></feed>
