@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Markdown 문법 - 땅이네</title>
-<meta name="description" content="마크다운 문법 *이탈릭*  이탈릭   **볼드** 볼드   &lt;!– 1개~6개 제목 »크기점점 작아짐    한개 이탈릭  ** 두개 볼드강조 언더바로도 대체가능하고 ** 이런식의 조합도 가능 –&gt;   Plus 기호            Star 기호                    Minus 기호">
+<meta name="description" content="이탈릭">
 
 
   <meta name="author" content="Deok Yong Kim">
@@ -26,7 +26,7 @@
 <meta property="og:url" content="https://ddange.github.io/markdown/Markdown/">
 
 
-  <meta property="og:description" content="마크다운 문법 *이탈릭*  이탈릭   **볼드** 볼드   &lt;!– 1개~6개 제목 »크기점점 작아짐    한개 이탈릭  ** 두개 볼드강조 언더바로도 대체가능하고 ** 이런식의 조합도 가능 –&gt;   Plus 기호            Star 기호                    Minus 기호">
+  <meta property="og:description" content="이탈릭">
 
 
 
@@ -127,10 +127,10 @@
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         
-          <a class="site-logo" href="/"><img src="/assets/images/Panda.png" alt="DDANG's Home"></a>
+          <a class="site-logo" href="/"><img src="/assets/images/Panda.png" alt="DDANG's Dev Log"></a>
         
         <a class="site-title" href="/">
-          DDANG's Home
+          DDANG's Dev Log
           
         </a>
         <ul class="visible-links"><li class="masthead__menu-item">
@@ -279,7 +279,7 @@
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Markdown 문법">
-    <meta itemprop="description" content="마크다운 문법*이탈릭* 이탈릭  **볼드**볼드  &lt;!–1개~6개 제목 »크기점점 작아짐  한개 이탈릭 ** 두개 볼드강조언더바로도 대체가능하고 ** 이런식의 조합도 가능–&gt;  Plus 기호          Star 기호                  Minus 기호                     ">
+    <meta itemprop="description" content="이탈릭">
     <meta itemprop="datePublished" content="2021-03-30T21:00:00+09:00">
     
 
@@ -317,57 +317,91 @@
           <aside class="sidebar__right ">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-align-justify"></i> Table of Contents</h4></header>
-              <ul class="toc__menu"><li><a href="#마크다운-문법">마크다운 문법</a></li><li><a href="#1개6개-제목크기점점-작아짐">1개~6개 제목 »크기점점 작아짐</a></li></ul>
+              <ul class="toc__menu"><li><a href="#이탈릭">이탈릭</a></li><li><a href="#볼드">볼드</a></li><li><a href="#글자색-변경">글자색 변경</a></li><li><a href="#순서없는-목록">순서없는 목록</a></li><li><a href="#인라인-강조">인라인 강조</a></li><li><a href="#테이블">테이블</a></li><li><a href="#페이지라인">페이지라인</a></li><li><a href="#줄바꾸기">줄바꾸기</a></li><li><a href="#링크">링크</a></li><li><a href="#사진링크--url">사진링크 &amp; Url</a></li></ul>
 
             </nav>
           </aside>
         
-        <h1 id="마크다운-문법"><strong>마크다운 문법</strong></h1>
-<p>*이탈릭* <br />
-<span style="color:red"><em>이탈릭</em></span>  <br />
-**볼드**<br />
-<span style="color:yellow"><strong>볼드</strong></span>  <br />
-&lt;!–</p>
-<h1 id="1개6개-제목크기점점-작아짐">1개~6개 제목 »크기점점 작아짐</h1>
-<ul>
-  <li>한개 이탈릭 
-** 두개 볼드강조
-<em>언더바로도 대체가능하고 **</em> 이런식의 조합도 가능
-–&gt;</li>
-  <li><span style="color:red">Plus 기호</span>
-    <ul>
-      <li>Star 기호
-        <ul>
-          <li>Minus 기호 <br />
-<!--들여쓰기 기호 탭으로 들여넣고 기호입력 --></li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
-<hr />
+        <h2 id="이탈릭">이탈릭</h2>
 
-<!-- 페이지라인 -->
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*이탈릭*   
+</code></pre></div></div>
 
-<p>[Google](http://www.google.com/) <br />
-주소링크 <a href="http://www.google.com/">Google</a></p>
-<hr />
+<blockquote>
+  <p><span style="color:red"><em>이탈릭</em></span></p>
+</blockquote>
 
-<!--링크 -->
+<p><br /><br /></p>
 
-<p><a href="https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Fwww.motor1.com%2Fnews%2F425260%2Fbmw-m2-europe-production-ending-fall%2F&amp;psig=AOvVaw2ZyKkOXePpxzr_oG8XiL_F&amp;ust=1617194358422000&amp;source=images&amp;cd=vfe&amp;ved=0CAIQjRxqFwoTCPDcyc2E2O8CFQAAAAAdAAAAABAP"><img src="https://cdn.motor1.com/images/mgl/vEXXb/s1/bmw-m2-cs-2020.jpg" alt="Picture" /></a>
-<!--이미지 주소링크 [![Picture](이미지주소)](주소링크) --></p>
+<h2 id="볼드">볼드</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>**볼드**  
+</code></pre></div></div>
 
-<p>`인라인` 강조</p>
+<blockquote>
+  <p><strong>볼드</strong></p>
+</blockquote>
 
-<p><code class="language-plaintext highlighter-rouge">인라인</code>강조</p>
+<p><br /><br /></p>
+
+<h2 id="글자색-변경">글자색 변경</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;span style="color:yellow"&gt; Text &lt;/span&gt;
+</code></pre></div></div>
+
+<blockquote>
+  <p><span style="color:yellow">Text</span></p>
+</blockquote>
+
+<p><br /><br /></p>
+
+<h2 id="순서없는-목록">순서없는 목록</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- Plus 기호
+    - Star 기호            
+        - Minus 기호
+</code></pre></div></div>
+
+<blockquote>
+  <p>Result</p>
+  <ul>
+    <li>Plus
+      <ul>
+        <li>Star
+          <ul>
+            <li>Minus
+<!--들여쓰기 기호 탭으로 들여넣고 기호입력 -->
+<br /><br /></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<h2 id="인라인-강조">인라인 강조</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>`인라인` 강조
+</code></pre></div></div>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">인라인</code>강조</p>
+</blockquote>
+
+<p><br /><br /></p>
+
+<h2 id="테이블">테이블</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> |컬럼명|컬럼명|컬럼명|
+ |--:|:--:|:--|
+ 오른쪽정렬 (--:)
+ 왼쪽정렬(기본값) (:--)
+ 중앙정렬 (:--:) 
+</code></pre></div></div>
 
 <table>
   <thead>
     <tr>
-      <th style="text-align: center"><strong>장점</strong></th>
-      <th style="text-align: center"><span style="color:yellow">단점</span></th>
-      <th style="text-align: center"><strong>활용범위</strong></th>
+      <th style="text-align: center">장점</th>
+      <th style="text-align: center">단점</th>
+      <th style="text-align: center">활용범위</th>
     </tr>
   </thead>
   <tbody>
@@ -382,17 +416,49 @@
       <td style="text-align: center">모든범주</td>
     </tr>
     <tr>
-      <td style="text-align: center"><strong><code class="language-plaintext highlighter-rouge">또</code></strong></td>
+      <td style="text-align: center">또</td>
       <td style="text-align: center">O</td>
       <td style="text-align: center">편하다</td>
     </tr>
     <tr>
-      <td style="text-align: center"><strong><code class="language-plaintext highlighter-rouge">또또</code></strong></td>
+      <td style="text-align: center">또또</td>
       <td style="text-align: center">X</td>
       <td style="text-align: center">편하다</td>
     </tr>
   </tbody>
 </table>
+
+<p><br /><br /></p>
+
+<h2 id="페이지라인">페이지라인</h2>
+<p>&lt;hr&gt;</p>
+<hr />
+
+<!-- 페이지라인 -->
+<p><br /><br /></p>
+
+<h2 id="줄바꾸기">줄바꾸기</h2>
+
+<p>&lt;br&gt;</p>
+
+<p><br /><br /></p>
+
+<h2 id="링크">링크</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[Google](http://www.google.com/)   
+</code></pre></div></div>
+
+<blockquote>
+  <p><a href="http://www.google.com/">Google</a></p>
+</blockquote>
+<hr />
+
+<!--링크 -->
+<p><br /><br /></p>
+
+<h2 id="사진링크--url">사진링크 &amp; Url</h2>
+<p><a href="https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Fwww.motor1.com%2Fnews%2F425260%2Fbmw-m2-europe-production-ending-fall%2F&amp;psig=AOvVaw2ZyKkOXePpxzr_oG8XiL_F&amp;ust=1617194358422000&amp;source=images&amp;cd=vfe&amp;ved=0CAIQjRxqFwoTCPDcyc2E2O8CFQAAAAAdAAAAABAP"><img src="https://cdn.motor1.com/images/mgl/vEXXb/s1/bmw-m2-cs-2020.jpg" alt="Picture" /></a>
+<!--이미지 주소링크 [![Picture](이미지주소)](주소링크) --></p>
 
 
         
