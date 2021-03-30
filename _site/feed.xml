@@ -1,4 +1,74 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://ddange.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ddange.github.io/" rel="alternate" type="text/html" /><updated>2021-03-30T05:33:28+09:00</updated><id>https://ddange.github.io/feed.xml</id><title type="html">땅이네</title><subtitle>Daily Log</subtitle><author><name>ddange</name><email>royalkdy@gmail.com</email></author><entry><title type="html">GitHubPage로 이사</title><link href="https://ddange.github.io/unity/testPost/" rel="alternate" type="text/html" title="GitHubPage로 이사" /><published>2021-03-24T07:00:00+09:00</published><updated>2021-03-24T07:00:00+09:00</updated><id>https://ddange.github.io/unity/testPost</id><content type="html" xml:base="https://ddange.github.io/unity/testPost/">&lt;h1 id=&quot;깃허브-페이지-시작&quot;&gt;깃허브 페이지 시작&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://ddange.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ddange.github.io/" rel="alternate" type="text/html" /><updated>2021-03-30T22:37:32+09:00</updated><id>https://ddange.github.io/feed.xml</id><title type="html">땅이네</title><subtitle>Daily Log</subtitle><author><name>ddange</name><email>royalkdy@gmail.com</email></author><entry><title type="html">Markdown 문법</title><link href="https://ddange.github.io/markdown/Markdown/" rel="alternate" type="text/html" title="Markdown 문법" /><published>2021-03-30T21:00:00+09:00</published><updated>2021-03-30T21:00:00+09:00</updated><id>https://ddange.github.io/markdown/Markdown</id><content type="html" xml:base="https://ddange.github.io/markdown/Markdown/">&lt;h1 id=&quot;마크다운-문법&quot;&gt;&lt;strong&gt;마크다운 문법&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;*이탈릭* &lt;br /&gt;
+&lt;span style=&quot;color:red&quot;&gt;&lt;em&gt;이탈릭&lt;/em&gt;&lt;/span&gt;  &lt;br /&gt;
+**볼드**&lt;br /&gt;
+&lt;span style=&quot;color:yellow&quot;&gt;&lt;strong&gt;볼드&lt;/strong&gt;&lt;/span&gt;  &lt;br /&gt;
+&amp;lt;!–&lt;/p&gt;
+&lt;h1 id=&quot;1개6개-제목크기점점-작아짐&quot;&gt;1개~6개 제목 »크기점점 작아짐&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;한개 이탈릭 
+** 두개 볼드강조
+&lt;em&gt;언더바로도 대체가능하고 **&lt;/em&gt; 이런식의 조합도 가능
+–&amp;gt;&lt;/li&gt;
+  &lt;li&gt;&lt;span style=&quot;color:red&quot;&gt;Plus 기호&lt;/span&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Star 기호
+        &lt;ul&gt;
+          &lt;li&gt;Minus 기호 &lt;br /&gt;
+&lt;!--들여쓰기 기호 탭으로 들여넣고 기호입력 --&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+
+&lt;!-- 페이지라인 --&gt;
+
+&lt;p&gt;[Google](http://www.google.com/) &lt;br /&gt;
+주소링크 &lt;a href=&quot;http://www.google.com/&quot;&gt;Google&lt;/a&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;!--링크 --&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.google.com/url?sa=i&amp;amp;url=https%3A%2F%2Fwww.motor1.com%2Fnews%2F425260%2Fbmw-m2-europe-production-ending-fall%2F&amp;amp;psig=AOvVaw2ZyKkOXePpxzr_oG8XiL_F&amp;amp;ust=1617194358422000&amp;amp;source=images&amp;amp;cd=vfe&amp;amp;ved=0CAIQjRxqFwoTCPDcyc2E2O8CFQAAAAAdAAAAABAP&quot;&gt;&lt;img src=&quot;https://cdn.motor1.com/images/mgl/vEXXb/s1/bmw-m2-cs-2020.jpg&quot; alt=&quot;Picture&quot; /&gt;&lt;/a&gt;
+&lt;!--이미지 주소링크 [![Picture](이미지주소)](주소링크) --&gt;&lt;/p&gt;
+
+&lt;p&gt;`인라인` 강조&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;인라인&lt;/code&gt;강조&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;&lt;strong&gt;장점&lt;/strong&gt;&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;&lt;span style=&quot;color:yellow&quot;&gt;단점&lt;/span&gt;&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;&lt;strong&gt;활용범위&lt;/strong&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;좋다&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;나쁘다&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;모든범주&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;편하다&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;X&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;모든범주&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;또&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;O&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;편하다&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;또또&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;X&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;편하다&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</content><author><name>Deok Yong Kim</name></author><category term="Markdown" /><category term="Markdown" /><summary type="html">마크다운 문법 *이탈릭* 이탈릭 **볼드** 볼드 &amp;lt;!– 1개~6개 제목 »크기점점 작아짐 한개 이탈릭 ** 두개 볼드강조 언더바로도 대체가능하고 ** 이런식의 조합도 가능 –&amp;gt; Plus 기호 Star 기호 Minus 기호</summary></entry><entry><title type="html">GitHubPage로 이사</title><link href="https://ddange.github.io/unity/testPost/" rel="alternate" type="text/html" title="GitHubPage로 이사" /><published>2021-03-24T07:00:00+09:00</published><updated>2021-03-24T07:00:00+09:00</updated><id>https://ddange.github.io/unity/testPost</id><content type="html" xml:base="https://ddange.github.io/unity/testPost/">&lt;h1 id=&quot;깃허브-페이지-시작&quot;&gt;깃허브 페이지 시작&lt;/h1&gt;
 
 &lt;p&gt;&lt;!-- 큰제목 밑에 =====헤더 타이틀 --&gt;
 깃허브에 익숙해지기 위해 블로그도 이사를 하게 됐다.&lt;/p&gt;

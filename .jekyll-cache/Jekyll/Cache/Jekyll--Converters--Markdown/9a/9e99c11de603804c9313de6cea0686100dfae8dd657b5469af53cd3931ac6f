@@ -1,0 +1,27 @@
+I"�<h1 id="마크다운-문법"><strong>마크다운 문법</strong></h1>
+<p>*이탈릭* <br />
+<span style="color:red"><em>이탈릭</em></span>  <br />
+**볼드**<br />
+<span style="color:yellow"><strong>볼드</strong></span>  <br />
+&lt;!–</p>
+<h1 id="1개6개-제목크기점점-작아짐">1개~6개 제목 »크기점점 작아짐</h1>
+<ul>
+  <li>한개 이탈릭 
+** 두개 볼드강조
+<em>언더바로도 대체가능하고 **</em> 이런식의 조합도 가능
+–&gt;</li>
+  <li><span style="color:red">Plus 기호</span>
+    <ul>
+      <li>Star 기호
+        <ul>
+          <li>Minus 기호 <br />
+<!--들여쓰기 기호 탭으로 들여넣고 기호입력 --></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+<hr />
+
+<!-- 페이지라인 -->
+:ET

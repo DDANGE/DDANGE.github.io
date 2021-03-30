@@ -1,7 +1,0 @@
-I"E<h1 id="first-post">First Post</h1>
-<div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Console</span><span class="p">.</span><span class="nf">Writeline</span><span class="p">(</span><span class="s">"C# Test"</span><span class="p">);</span>
-<span class="k">public</span> <span class="k">class</span> <span class="nc">Test</span><span class="p">{</span>
-    <span class="k">private</span> <span class="kt">string</span> <span class="n">name</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div>
-:ET
