@@ -10,4 +10,10 @@ var store = [{
         "tags": ["Markdown"],
         "url": "/markdown/Markdown/",
         "teaser": null
+      },{
+        "title": "Rendering Pipeline",
+        "excerpt":"랜더링파이프라인의 정의 3차원 이미지를 2차원 래스터 이미지로 표현하기 위한 단계적인 방법 래스터란? 이미지를 2차원 배열 형태의 픽셀로 구성하고 이 점들의 모습을 조합. 한줄에서 연속된 픽셀들의 집합을 래스터라고 한다. 오브젝트를 랜더링하기위해 많은 데이터들을 필요로 한다. 오브젝트의 입체적 형태를 나타내는 Mesh정보 알베도(Albedo), 노멀(Normal), 스펙큘러(Specular)등의 텍스처 정보 라이팅(Lighting)처리를 위한 쉐이더(Shader)정보 위치, 회전, 스케일을...","categories": ["Unity"],
+        "tags": ["Optimization"],
+        "url": "/unity/RenderingPipeline/",
+        "teaser": null
       }]

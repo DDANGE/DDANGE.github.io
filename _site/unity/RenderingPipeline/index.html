@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Markdown 문법 - 땅이네</title>
-<meta name="description" content="이탈릭">
+<!-- begin _includes/seo.html --><title>Rendering Pipeline - 땅이네</title>
+<meta name="description" content="랜더링파이프라인의 정의">
 
 
   <meta name="author" content="Deok Yong Kim">
@@ -22,11 +22,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="땅이네">
-<meta property="og:title" content="Markdown 문법">
-<meta property="og:url" content="https://ddange.github.io/markdown/Markdown/">
+<meta property="og:title" content="Rendering Pipeline">
+<meta property="og:url" content="https://ddange.github.io/unity/RenderingPipeline/">
 
 
-  <meta property="og:description" content="이탈릭">
+  <meta property="og:description" content="랜더링파이프라인의 정의">
 
 
 
@@ -45,7 +45,7 @@
   
 
 
-<link rel="canonical" href="https://ddange.github.io/markdown/Markdown/">
+<link rel="canonical" href="https://ddange.github.io/unity/RenderingPipeline/">
 
 
 
@@ -278,15 +278,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Markdown 문법">
-    <meta itemprop="description" content="이탈릭">
+    <meta itemprop="headline" content="Rendering Pipeline">
+    <meta itemprop="description" content="랜더링파이프라인의 정의">
     <meta itemprop="datePublished" content="2021-03-30T21:00:00+09:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">Markdown 문법
+          <h1 id="page-title" class="page__title" itemprop="headline">Rendering Pipeline
 </h1>
           
 
@@ -302,7 +302,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          less than 1 minute read
+          1 minute read
         
       </span>
     
@@ -317,148 +317,109 @@
           <aside class="sidebar__right ">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-align-justify"></i> Table of Contents</h4></header>
-              <ul class="toc__menu"><li><a href="#이탈릭">이탈릭</a></li><li><a href="#볼드">볼드</a></li><li><a href="#글자색-변경">글자색 변경</a></li><li><a href="#순서없는-목록">순서없는 목록</a></li><li><a href="#인라인-강조">인라인 강조</a></li><li><a href="#테이블">테이블</a></li><li><a href="#페이지라인">페이지라인</a></li><li><a href="#줄바꾸기">줄바꾸기</a></li><li><a href="#링크">링크</a></li><li><a href="#사진링크--url">사진링크 &amp; Url</a></li></ul>
+              <ul class="toc__menu"><li><a href="#랜더링파이프라인의-정의">랜더링파이프라인의 정의</a></li><li><a href="#랜더링파이프라인의-주요파트">랜더링파이프라인의 주요파트</a><ul><li><a href="#애플리케이션-스테이지">애플리케이션 스테이지</a></li><li><a href="#지오메트리-스테이지">지오메트리 스테이지</a><ul><li><a href="#버텍스-트랜스폼">버텍스 트랜스폼</a></li><li><a href="#버텍스-쉐이더vertex-shader">버텍스 쉐이더(Vertex Shader)</a></li><li><a href="#지오메트리-생성">지오메트리 생성</a></li></ul></li></ul></li><li><a href="#래스터라이저-스테이지rasterizer-stage">래스터라이저 스테이지(Rasterizer Stage)</a></li></ul></li></ul>
 
             </nav>
           </aside>
         
-        <h2 id="이탈릭">이탈릭</h2>
+        <h1 id="랜더링파이프라인의-정의">랜더링파이프라인의 정의<br /></h1>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*이탈릭*   
-</code></pre></div></div>
+<ol>
+  <li>3차원 이미지를 2차원 래스터 이미지로 표현하기 위한 단계적인 방법
+    <blockquote>
+      <p>래스터란?<br />
+이미지를 2차원 배열 형태의 픽셀로 구성하고 이 점들의 모습을 조합.
+ 한줄에서 연속된 픽셀들의 집합을 래스터라고 한다.</p>
+    </blockquote>
 
-<blockquote>
-  <p><span style="color:#FF8E99"><em>이탈릭</em></span></p>
-</blockquote>
-
-<p><br /><br /></p>
-
-<h2 id="볼드">볼드</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>**볼드**  
-</code></pre></div></div>
-
-<blockquote>
-  <p><strong>볼드</strong></p>
-</blockquote>
-
-<p><br /><br /></p>
-
-<h2 id="글자색-변경">글자색 변경</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;span style="color:yellow"&gt; Text &lt;/span&gt;
-</code></pre></div></div>
-
-<blockquote>
-  <p><span style="color:yellow">Text</span></p>
-</blockquote>
-
-<p><br /><br /></p>
-
-<h2 id="순서없는-목록">순서없는 목록</h2>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- Plus 기호
-    - Star 기호            
-        - Minus 기호
-</code></pre></div></div>
-
-<blockquote>
-  <p>Result</p>
-  <ul>
-    <li>Plus
-      <ul>
-        <li>Star
-          <ul>
-            <li>Minus
-<!--들여쓰기 기호 탭으로 들여넣고 기호입력 -->
+    <p>오브젝트를 랜더링하기위해 많은 데이터들을 필요로 한다.</p>
+    <ul>
+      <li>오브젝트의 입체적 형태를 나타내는 Mesh정보</li>
+      <li>알베도(Albedo), 노멀(Normal), 스펙큘러(Specular)등의 텍스처 정보</li>
+      <li>라이팅(Lighting)처리를 위한 쉐이더(Shader)정보</li>
+      <li>위치, 회전, 스케일을 정의하는 트랜스폼(Transform)정보
 <br /><br /></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</blockquote>
+    </ul>
+  </li>
+  <li>위와 같은 많은 데이터를 처리하는 과정, 랜더링 파이프라인(Rendering Pipeline) 혹은 그래픽스 파이프라인(Graphics Pipeline)이라는 용어로 설명
+<br /><br /></li>
+</ol>
 
-<h2 id="인라인-강조">인라인 강조</h2>
+<h1 id="랜더링파이프라인의-주요파트">랜더링파이프라인의 주요파트</h1>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>`인라인` 강조
+<ul>
+  <li>애플리케이션(Application) -&gt; 지오메트리(Geometry) -&gt; 레스터라이저(Rasterizer)
+<br />
+<br /></li>
+</ul>
+
+<h3 id="애플리케이션-스테이지"><span style="color:#FF8E99">애플리케이션 스테이지</span></h3>
+<p>애플리케이션 스테이지는 CPU에의해 연산을 하고 보통 랜더링 파이프라인이라는 과정에서 떼어놓고 말한다. 
+본격적인 그래픽 랜더링 파이프라인에 진입하기전 매프레임 CPU에 의해 연산되는
+케릭터의 이동후 위치정보, 애니메이션정보와 뼈대들의 위치
+랜더링 가능한 오브젝트들을 선별하는 컬링연산 및 배칭처리 단계</p>
+
+<h3 id="지오메트리-스테이지"><span style="color:#FF8E99">지오메트리 스테이지</span></h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- 월드-뷰-프로젝션 트랜스폼
+- 클리핑(clipping)
+- 버텍스 쉐이더(vertex shader)
 </code></pre></div></div>
+
+<p>전반적으로 오브젝트의 각 버텍스들을 화면상의 적절한 위치에 배치시키는 과정
+<br /></p>
+
+<h4 id="버텍스-트랜스폼"><span style="color:#00F4E4">버텍스 트랜스폼</span></h4>
+
+<p>랜더링을 수행해야 하는 시점이 되면 버텍스 데이터들을 GPU메모리에서 가져온다. 
+그리고 적절한 위치에 그려주기 위해서 위치변환 트랜스폼을 수행한다.</p>
+
+<p>World-View-Projection Transform</p>
 
 <blockquote>
-  <p><code class="language-plaintext highlighter-rouge">인라인</code>강조</p>
+  <p>버텍스 데이터는 특정위치가 반영된 데이터가 아닌 메시 형태만 반영되어 있는 데이터
+ 오브젝트는 여러 인스턴스에 사용되며 인스턴스마다 위치가 다르고 매번 위치가 바뀌기 때문에 원점 기준의 메시 모델에 대한 위치 데이터
+즉 로컬 스페이스에 존재한다.</p>
 </blockquote>
 
-<p><br /><br /></p>
+<ol>
+  <li>월드 트랜스폼
+    <ul>
+      <li>로컬스페이스 위치 정보를 가지고 있는 오브젝트를 3D공간상의 특정위치시켜주는 좌표 변환과정</li>
+      <li>메시의 모든 버텍스의 위치와 노멀을 월드스페이스로 변환 시킨다</li>
+    </ul>
+  </li>
+  <li>뷰 트랜스폼
+    <ul>
+      <li>카메라가 바라보는 위치에 오브젝트를 위치시키는 변환과정</li>
+    </ul>
+  </li>
+  <li>프로젝션 트랜스폼(투영)
+    <ul>
+      <li>3D공간을 2D상의 위치로 매칭시켜주는 과정</li>
+      <li>이 과정에서 원근법도 적용이 된다.</li>
+      <li>퍼스펙티브 프로젝션(perspective projection) 원근법이 적용된 투영 (3D)</li>
+      <li>오쏘 그래픽 프로젝션(orthographic projection) 원근법이 무시된 투영 (2D)</li>
+    </ul>
 
-<h2 id="테이블">테이블</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> |컬럼명|컬럼명|컬럼명|
- |--:|:--:|:--|
- 오른쪽정렬 (--:)
- 왼쪽정렬(기본값) (:--)
- 중앙정렬 (:--:) 
-</code></pre></div></div>
+    <p><br /></p>
+  </li>
+</ol>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center">장점</th>
-      <th style="text-align: center">단점</th>
-      <th style="text-align: center">활용범위</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center">좋다</td>
-      <td style="text-align: center">나쁘다</td>
-      <td style="text-align: center">모든범주</td>
-    </tr>
-    <tr>
-      <td style="text-align: center">편하다</td>
-      <td style="text-align: center">X</td>
-      <td style="text-align: center">모든범주</td>
-    </tr>
-    <tr>
-      <td style="text-align: center">또</td>
-      <td style="text-align: center">O</td>
-      <td style="text-align: center">편하다</td>
-    </tr>
-    <tr>
-      <td style="text-align: center">또또</td>
-      <td style="text-align: center">X</td>
-      <td style="text-align: center">편하다</td>
-    </tr>
-  </tbody>
-</table>
+<h4 id="버텍스-쉐이더vertex-shader"><span style="color:#00F4E4">버텍스 쉐이더(Vertex Shader)</span></h4>
+<ul>
+  <li>버텍스에 특수한 효과를 위한 왜곡 , 버텍스의 노멀방향으로 부피를 확장, 
+  버텍스별로 처리되는 라이팅의 결과 반영, 픽셀 라이팅보다 러프하게 표현</li>
+</ul>
 
-<p><br /><br /></p>
+<p><br /></p>
 
-<h2 id="페이지라인">페이지라인</h2>
-<p>&lt;hr&gt;</p>
-<hr />
+<h4 id="지오메트리-생성"><span style="color:#00F4E4">지오메트리 생성</span></h4>
+<ul>
+  <li>버텍스 쉐이더를 거치고 나면 버텍스들이 연결되어 선이 만들어지고 도형의 형태가 된다
+  지오메트리 생성은 버텍스 쉐이더에서 버텍스의 트랜스폼들이 결정되고 나면 다음 단계에서 자동으로 이루어진다.</li>
+</ul>
 
-<!-- 페이지라인 -->
-<p><br /><br /></p>
-
-<h2 id="줄바꾸기">줄바꾸기</h2>
-
-<p>&lt;br&gt;</p>
-
-<p><br /><br /></p>
-
-<h2 id="링크">링크</h2>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[Google](http://www.google.com/)   
-</code></pre></div></div>
-
-<blockquote>
-  <p><a href="http://www.google.com/">Google</a></p>
-</blockquote>
-<hr />
-
-<!--링크 -->
-<p><br /><br /></p>
-
-<h2 id="사진링크--url">사진링크 &amp; Url</h2>
-<p><a href="https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Fwww.motor1.com%2Fnews%2F425260%2Fbmw-m2-europe-production-ending-fall%2F&amp;psig=AOvVaw2ZyKkOXePpxzr_oG8XiL_F&amp;ust=1617194358422000&amp;source=images&amp;cd=vfe&amp;ved=0CAIQjRxqFwoTCPDcyc2E2O8CFQAAAAAdAAAAABAP"><img src="https://cdn.motor1.com/images/mgl/vEXXb/s1/bmw-m2-cs-2020.jpg" alt="Picture" /></a>
-<!--이미지 주소링크 [![Picture](이미지주소)](주소링크) --></p>
+<h2 id="래스터라이저-스테이지rasterizer-stage"><span style="color:#FF8E99">래스터라이저 스테이지(Rasterizer Stage)</span></h2>
 
 
         
@@ -476,7 +437,7 @@
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/markdown" class="page__taxonomy-item" rel="tag">Markdown</a>
+      <a href="/tags/optimization" class="page__taxonomy-item" rel="tag">Optimization</a>
     
     </span>
   </p>
@@ -493,7 +454,7 @@
     <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
     <span itemprop="keywords">
     
-      <a href="/categories/markdown" class="page__taxonomy-item" rel="tag">Markdown</a>
+      <a href="/categories/unity" class="page__taxonomy-item" rel="tag">Unity</a>
     
     </span>
   </p>
@@ -510,12 +471,11 @@
       
   <nav class="pagination">
     
-      <a href="/unity/testPost/" class="pagination--pager" title="GitHubPage로 이사
+      <a href="/markdown/Markdown/" class="pagination--pager" title="Markdown 문법
 ">Previous</a>
     
     
-      <a href="/unity/RenderingPipeline/" class="pagination--pager" title="Rendering Pipeline
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -539,7 +499,7 @@
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/unity/RenderingPipeline/" rel="permalink">Rendering Pipeline
+        <a href="/markdown/Markdown/" rel="permalink">Markdown 문법
 </a>
       
     </h2>
@@ -557,14 +517,14 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 minute read
+          less than 1 minute read
         
       </span>
     
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">랜더링파이프라인의 정의
+    <p class="archive__item-excerpt" itemprop="description">이탈릭
 </p>
   </article>
 </div>

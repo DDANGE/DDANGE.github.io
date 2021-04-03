@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://ddange.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ddange.github.io/" rel="alternate" type="text/html" /><updated>2021-03-30T23:56:19+09:00</updated><id>https://ddange.github.io/feed.xml</id><title type="html">땅이네</title><subtitle>Daily Log</subtitle><author><name>ddange</name><email>royalkdy@gmail.com</email></author><entry><title type="html">Markdown 문법</title><link href="https://ddange.github.io/markdown/Markdown/" rel="alternate" type="text/html" title="Markdown 문법" /><published>2021-03-30T21:00:00+09:00</published><updated>2021-03-30T21:00:00+09:00</updated><id>https://ddange.github.io/markdown/Markdown</id><content type="html" xml:base="https://ddange.github.io/markdown/Markdown/">&lt;h2 id=&quot;이탈릭&quot;&gt;이탈릭&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://ddange.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ddange.github.io/" rel="alternate" type="text/html" /><updated>2021-04-03T16:08:30+09:00</updated><id>https://ddange.github.io/feed.xml</id><title type="html">땅이네</title><subtitle>Daily Log</subtitle><author><name>ddange</name><email>royalkdy@gmail.com</email></author><entry><title type="html">Markdown 문법</title><link href="https://ddange.github.io/markdown/Markdown/" rel="alternate" type="text/html" title="Markdown 문법" /><published>2021-03-30T21:00:00+09:00</published><updated>2021-03-30T21:00:00+09:00</updated><id>https://ddange.github.io/markdown/Markdown</id><content type="html" xml:base="https://ddange.github.io/markdown/Markdown/">&lt;h2 id=&quot;이탈릭&quot;&gt;이탈릭&lt;/h2&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;*이탈릭*   
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;&lt;span style=&quot;color:red&quot;&gt;&lt;em&gt;이탈릭&lt;/em&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;span style=&quot;color:#FF8E99&quot;&gt;&lt;em&gt;이탈릭&lt;/em&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -134,7 +134,104 @@
 
 &lt;h2 id=&quot;사진링크--url&quot;&gt;사진링크 &amp;amp; Url&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.google.com/url?sa=i&amp;amp;url=https%3A%2F%2Fwww.motor1.com%2Fnews%2F425260%2Fbmw-m2-europe-production-ending-fall%2F&amp;amp;psig=AOvVaw2ZyKkOXePpxzr_oG8XiL_F&amp;amp;ust=1617194358422000&amp;amp;source=images&amp;amp;cd=vfe&amp;amp;ved=0CAIQjRxqFwoTCPDcyc2E2O8CFQAAAAAdAAAAABAP&quot;&gt;&lt;img src=&quot;https://cdn.motor1.com/images/mgl/vEXXb/s1/bmw-m2-cs-2020.jpg&quot; alt=&quot;Picture&quot; /&gt;&lt;/a&gt;
-&lt;!--이미지 주소링크 [![Picture](이미지주소)](주소링크) --&gt;&lt;/p&gt;</content><author><name>Deok Yong Kim</name></author><category term="Markdown" /><category term="Markdown" /><summary type="html">이탈릭</summary></entry><entry><title type="html">GitHubPage로 이사</title><link href="https://ddange.github.io/unity/testPost/" rel="alternate" type="text/html" title="GitHubPage로 이사" /><published>2021-03-24T07:00:00+09:00</published><updated>2021-03-24T07:00:00+09:00</updated><id>https://ddange.github.io/unity/testPost</id><content type="html" xml:base="https://ddange.github.io/unity/testPost/">&lt;h1 id=&quot;깃허브-페이지-시작&quot;&gt;깃허브 페이지 시작&lt;/h1&gt;
+&lt;!--이미지 주소링크 [![Picture](이미지주소)](주소링크) --&gt;&lt;/p&gt;</content><author><name>Deok Yong Kim</name></author><category term="Markdown" /><category term="Markdown" /><summary type="html">이탈릭</summary></entry><entry><title type="html">Rendering Pipeline</title><link href="https://ddange.github.io/unity/RenderingPipeline/" rel="alternate" type="text/html" title="Rendering Pipeline" /><published>2021-03-30T21:00:00+09:00</published><updated>2021-03-30T21:00:00+09:00</updated><id>https://ddange.github.io/unity/RenderingPipeline</id><content type="html" xml:base="https://ddange.github.io/unity/RenderingPipeline/">&lt;h1 id=&quot;랜더링파이프라인의-정의&quot;&gt;랜더링파이프라인의 정의&lt;br /&gt;&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;3차원 이미지를 2차원 래스터 이미지로 표현하기 위한 단계적인 방법
+    &lt;blockquote&gt;
+      &lt;p&gt;래스터란?&lt;br /&gt;
+이미지를 2차원 배열 형태의 픽셀로 구성하고 이 점들의 모습을 조합.
+ 한줄에서 연속된 픽셀들의 집합을 래스터라고 한다.&lt;/p&gt;
+    &lt;/blockquote&gt;
+
+    &lt;p&gt;오브젝트를 랜더링하기위해 많은 데이터들을 필요로 한다.&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;오브젝트의 입체적 형태를 나타내는 Mesh정보&lt;/li&gt;
+      &lt;li&gt;알베도(Albedo), 노멀(Normal), 스펙큘러(Specular)등의 텍스처 정보&lt;/li&gt;
+      &lt;li&gt;라이팅(Lighting)처리를 위한 쉐이더(Shader)정보&lt;/li&gt;
+      &lt;li&gt;위치, 회전, 스케일을 정의하는 트랜스폼(Transform)정보
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;위와 같은 많은 데이터를 처리하는 과정, 랜더링 파이프라인(Rendering Pipeline) 혹은 그래픽스 파이프라인(Graphics Pipeline)이라는 용어로 설명
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;랜더링파이프라인의-주요파트&quot;&gt;랜더링파이프라인의 주요파트&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;애플리케이션(Application) -&amp;gt; 지오메트리(Geometry) -&amp;gt; 레스터라이저(Rasterizer)
+&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;애플리케이션-스테이지&quot;&gt;&lt;span style=&quot;color:#FF8E99&quot;&gt;애플리케이션 스테이지&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;애플리케이션 스테이지는 CPU에의해 연산을 하고 보통 랜더링 파이프라인이라는 과정에서 떼어놓고 말한다. 
+본격적인 그래픽 랜더링 파이프라인에 진입하기전 매프레임 CPU에 의해 연산되는
+케릭터의 이동후 위치정보, 애니메이션정보와 뼈대들의 위치
+랜더링 가능한 오브젝트들을 선별하는 컬링연산 및 배칭처리 단계&lt;/p&gt;
+
+&lt;h3 id=&quot;지오메트리-스테이지&quot;&gt;&lt;span style=&quot;color:#FF8E99&quot;&gt;지오메트리 스테이지&lt;/span&gt;&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- 월드-뷰-프로젝션 트랜스폼
+- 클리핑(clipping)
+- 버텍스 쉐이더(vertex shader)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;전반적으로 오브젝트의 각 버텍스들을 화면상의 적절한 위치에 배치시키는 과정
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;버텍스-트랜스폼&quot;&gt;&lt;span style=&quot;color:#00F4E4&quot;&gt;버텍스 트랜스폼&lt;/span&gt;&lt;/h4&gt;
+
+&lt;p&gt;랜더링을 수행해야 하는 시점이 되면 버텍스 데이터들을 GPU메모리에서 가져온다. 
+그리고 적절한 위치에 그려주기 위해서 위치변환 트랜스폼을 수행한다.&lt;/p&gt;
+
+&lt;p&gt;World-View-Projection Transform&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;버텍스 데이터는 특정위치가 반영된 데이터가 아닌 메시 형태만 반영되어 있는 데이터
+ 오브젝트는 여러 인스턴스에 사용되며 인스턴스마다 위치가 다르고 매번 위치가 바뀌기 때문에 원점 기준의 메시 모델에 대한 위치 데이터
+즉 로컬 스페이스에 존재한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;월드 트랜스폼
+    &lt;ul&gt;
+      &lt;li&gt;로컬스페이스 위치 정보를 가지고 있는 오브젝트를 3D공간상의 특정위치시켜주는 좌표 변환과정&lt;/li&gt;
+      &lt;li&gt;메시의 모든 버텍스의 위치와 노멀을 월드스페이스로 변환 시킨다&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;뷰 트랜스폼
+    &lt;ul&gt;
+      &lt;li&gt;카메라가 바라보는 위치에 오브젝트를 위치시키는 변환과정&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;프로젝션 트랜스폼(투영)
+    &lt;ul&gt;
+      &lt;li&gt;3D공간을 2D상의 위치로 매칭시켜주는 과정&lt;/li&gt;
+      &lt;li&gt;이 과정에서 원근법도 적용이 된다.&lt;/li&gt;
+      &lt;li&gt;퍼스펙티브 프로젝션(perspective projection) 원근법이 적용된 투영 (3D)&lt;/li&gt;
+      &lt;li&gt;오쏘 그래픽 프로젝션(orthographic projection) 원근법이 무시된 투영 (2D)&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;버텍스-쉐이더vertex-shader&quot;&gt;&lt;span style=&quot;color:#00F4E4&quot;&gt;버텍스 쉐이더(Vertex Shader)&lt;/span&gt;&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;버텍스에 특수한 효과를 위한 왜곡 , 버텍스의 노멀방향으로 부피를 확장, 
+  버텍스별로 처리되는 라이팅의 결과 반영, 픽셀 라이팅보다 러프하게 표현&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;지오메트리-생성&quot;&gt;&lt;span style=&quot;color:#00F4E4&quot;&gt;지오메트리 생성&lt;/span&gt;&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;버텍스 쉐이더를 거치고 나면 버텍스들이 연결되어 선이 만들어지고 도형의 형태가 된다
+  지오메트리 생성은 버텍스 쉐이더에서 버텍스의 트랜스폼들이 결정되고 나면 다음 단계에서 자동으로 이루어진다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;래스터라이저-스테이지rasterizer-stage&quot;&gt;&lt;span style=&quot;color:#FF8E99&quot;&gt;래스터라이저 스테이지(Rasterizer Stage)&lt;/span&gt;&lt;/h2&gt;</content><author><name>Deok Yong Kim</name></author><category term="Unity" /><category term="Optimization" /><summary type="html">랜더링파이프라인의 정의</summary></entry><entry><title type="html">GitHubPage로 이사</title><link href="https://ddange.github.io/unity/testPost/" rel="alternate" type="text/html" title="GitHubPage로 이사" /><published>2021-03-24T07:00:00+09:00</published><updated>2021-03-24T07:00:00+09:00</updated><id>https://ddange.github.io/unity/testPost</id><content type="html" xml:base="https://ddange.github.io/unity/testPost/">&lt;h1 id=&quot;깃허브-페이지-시작&quot;&gt;깃허브 페이지 시작&lt;/h1&gt;
 
 &lt;p&gt;&lt;!-- 큰제목 밑에 =====헤더 타이틀 --&gt;
 깃허브에 익숙해지기 위해 블로그도 이사를 하게 됐다.&lt;/p&gt;
