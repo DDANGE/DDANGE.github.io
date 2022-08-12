@@ -124,23 +124,29 @@ Response
 
 2️⃣ **SendGift** 선물보내기
 Request
+ItemIDX = ST_Item->Idx , memberIDX = 멤버idx
 ```json
 {
 	"id": "eae7c783",
 	"method" : 1000,
 	"params" : { 
-		"ItemIDX" : 1
+		"ItemIDX" : 1,
+        "memberIDX" : 1
 	},
 	"sess" : "ce3ad94c7971c62a7de3718b2fde66f31463e1a0e1122865a0801583"
 }
 ```
 
 Response
+MemberIDX = 선물을 받은 멤버IDX
+totalPoint = 선물보내기 성공이후 누적 포인트
 ```json
 {
 	"id: "eae7c783",
 	"result":{
 		"res" : true,
+        "MemberIDX" : 1,
+        "totalPoint" : 999
 	}
 	"server_time" : 1648091997
 }
@@ -164,11 +170,15 @@ ItemIDX = ST_Item -> Idx
 ```
 
 Response
+ItemIDX = ST_Item -> Idx 구매한 아이템 idx
+totalCnt = 구매성공후 누적 아이템 갯수
 ```json
 {
 	"id: "eae7c783",
 	"result":{
 		"res" : true,
+        "ItemIDX" : 1,
+        "totalCnt" : 999
 	}
 	"server_time" : 1648091997
 }
@@ -189,11 +199,13 @@ Request
 ```
 
 Response
+totalGiftCount = 구매성공이후 누적 선물가능횟수
 ```json
 {
 	"id: "eae7c783",
 	"result":{
 		"res" : true,
+        "totalGiftCount" : 7
 	}
 	"server_time" : 1648091997
 }
