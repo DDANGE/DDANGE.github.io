@@ -1,0 +1,320 @@
+# 타이니그램 컨텐츠 서버 디자인
+
+### 🔷 선물하기
+
+1. 선물리스트 
+    - UT_GiftList 테이블추가
+    - Column : Idx, UserIDX, ItemIDX, Count
+
+2. 선물하기 횟수 서버관리 
+    - UT_Resource 테이블 Column추가 -> GiftCount
+
+3. 선물구매 (다이아) 
+4. 선물하기 횟수 구매(다이아)
+
+---
+### 🔷 랭킹
+Redis 활용 
+Sorted Set
+Collection = relation_{0} = MemberIDX
+Key = UserIDX
+Value = relationPoint - 주마다 초기화
+
+1. 호감도
+2. 멤버별 랭킹보드 (7개)
+4. 주마다 초기화
+
+---
+### 🔷 랭킹집계
+ * Linux Clon 활용
+ 
+ 1. 1주일 주기
+    - 랭킹집계 
+    - 보상우편 발송
+ 2. 매일 주기
+    - 선물 가능 횟수 리셋
+---
+
+### 🔷 Protocol
+<br>
+1️⃣ **GetTinygramInfo** 타이니그램 정보 요청 
+* 개인랭킹 정보
+    - 순위, 주간 호감도 포인트
+* 멤버별 1~10위 유저 목록 
+    - 순위, 유저닉네임, 호감도포인트
+
+<br>
+
+Request
+```json
+{
+	"id": "eae7c783",
+	"method" : 1000,
+	"params" : {},
+	"sess" : "ce3ad94c7971c62a7de3718b2fde66f31463e1a0e1122865a0801583"
+}
+```
+
+Response
+```json
+{
+	"id": "eae7c783",
+	"result":{
+		"rankingList" : [
+							{
+							    "memberIDX" : 1,
+							    "rank" : [
+										    {
+											    "userNick" : "name",
+											    "relPoint" : 100
+										    },
+										    {
+											"userNick" : "name",
+											"relPoint" : 80
+										    }	
+									    ]
+							},
+							{
+							    "memberIDX" : 2,
+							    "rank" : [
+										    {
+											    "userNick" : "name",
+											    "relPoint" : 100
+										    },
+										    {
+											"userNick" : "name",
+											"relPoint" : 80
+										    }
+									    ]
+							}
+                        
+						 ],
+		"myRaking" : [
+                        {
+                            "memberIDX" : 1,
+                            "myRank" : 1,
+                            "relationPoint" : 1000		
+                        },
+                        {
+                            "memberIDX" : 2,
+                            "myRank" : 1,
+                            "relationPoint" : 1000		
+                        },
+                        {
+                            "memberIDX" : 3,
+                            "myRank" : 1,
+                            "relationPoint" : 1000		
+                        }
+                 
+		],
+		"GiftChance" : 7
+	},
+	"server_time" : 1648091997
+}
+```
+	
+	* Response Data 
+		1. 각 맴버별 랭킹 순위 1~10위
+		2. 현재 유저 멤버별 호감도 
+		3. 선물 가능 횟수
+	
+
+
+<br><br><br>
+
+2️⃣ **SendGift** 선물보내기
+Request
+```json
+{
+	"id": "eae7c783",
+	"method" : 1000,
+	"params" : { 
+		"ItemIDX" : 1
+	},
+	"sess" : "ce3ad94c7971c62a7de3718b2fde66f31463e1a0e1122865a0801583"
+}
+```
+
+Response
+```json
+{
+	"id: "eae7c783",
+	"result":{
+		"res" : true,
+	}
+	"server_time" : 1648091997
+}
+```
+
+<br><br><br>
+
+3️⃣ **BuyGift** 선물구매
+Request
+ItemIDX = ST_Item -> Idx 
+```json
+{
+	"id": "eae7c783",
+	"method" : 1000,
+	"params" : { 
+		"ItemIDX" : 1,
+		"cnt" : 10
+	},
+	"sess" : "ce3ad94c7971c62a7de3718b2fde66f31463e1a0e1122865a0801583"
+}
+```
+
+Response
+```json
+{
+	"id: "eae7c783",
+	"result":{
+		"res" : true,
+	}
+	"server_time" : 1648091997
+}
+```
+<br><br><br>
+
+4️⃣ **BuyGiftChance** 선물하기 횟수 구매
+Request
+```json
+{
+	"id": "eae7c783",
+	"method" : 1000,
+	"params" : { 
+		"cnt" : 3,
+	},
+	"sess" : "ce3ad94c7971c62a7de3718b2fde66f31463e1a0e1122865a0801583"
+}
+```
+
+Response
+```json
+{
+	"id: "eae7c783",
+	"result":{
+		"res" : true,
+	}
+	"server_time" : 1648091997
+}
+```
+
+<br><br><br>
+
+# 시스템 테이블
+1. **ST_Relation**  (멤버별 호칭과 필요 관계포인트)
+    * Idx - int - 고유값
+    * Member - int - 멤버번호  
+    * RelationName - int - 관계호칭
+    * ReqRelationPoint - int - 필요 관계 포인트
+    * ProfileText - int - 게시글
+---
+2. **ST_Picture** (멤버별 사진 테이블, 언락 조건)
+    * Idx —int  고유값
+    * Name - int - 사진이름
+    * Member - int - 멤버번호
+    * Image - string - 사진 이미지 파일명
+    * Type - int - 사진타입 (획득조건타입)
+    * ReqUnlockIdx - int - 해금조건 IDX
+    * ReqUnlockValue - int - 해금조건 값
+    * UnlockText - int - 해금조건 텍스트
+    * Icon - string - 사진용 공용 아이콘
+---
+3. **ST_GiftList** (멤버들에게 선물할 아이템 리스트)
+    * Idx - int - 고유값
+    * Sort - int - 우선순위 오더
+    * GiftItemIdx - int - 리스트 선물 아이템    ???
+    * RelationPoint - int - 선물이 주는 관계 포인트
+    * SellType - int - 판매타입 (0 = 미판매, 1 = 판매)
+    * PriceType - int - 구매 재화 타입 (0=미판매, 1=다이아, 101=광고)
+    * PriceIdx - int - 재화 참고할 인덱스 ???
+    * PriceCnt - int - 구매가격
+---
+4. **ST_GiftingList**
+    * Idx - int - 고유값
+    * Sort - int - 리스트 정렬순서
+    * Name - int -선물횟수 상품 이름
+    * Icon - string - 선물횟수상품 아이콘
+    * GiftingBuyCnt - int -  구매시 충전되는 선물 횟수 
+    * PriceType - int - 재화타입 (1 = 다이아)
+    * PriceIdx - int - 재화 참고할 인덱스
+    * PriceCnt - int - 구매가격
+---
+5. **ST_TinytanDM**
+    * Idx - int - 고유값
+    * Type - int - 메시지 타입 (1 = 1위 메시지, 2 = 랜덤 메시지, 3 = 관계달성 메시지)
+    * TypeReferValue - int -  타입별 참조값 
+    	— (Type = 1,2면 멤버번호, Type = 3이면 ST_Relation > Idx)
+    * MessageString - int - 메시지 텍스트
+    * RewardGroup - int - 메시지 보상 그룹 
+	— (ST_TinygramReward -> RewardGroup)
+	— 해당하는 Group번호 리스트 중에서 ST_TinygramReward -> Rate 확률로
+            RewardVarietyCnt만큼 지급
+    * RewardVarietyCnt - int - 보상 종류 개수
+---
+6. **ST_Rank**
+    * idx - int - 고유값
+    * RankRangeLow - int - 순위 범위
+    * RankRangeHigh  - int - 순위 범위
+    * RankNotiText - int - 순위 안내 텍스트
+    * RewardGroup - int - 랭킹 보상 그룹
+
+---
+**기획서 버전1.0에서 삭제**
+-~~6. ST_RankSeason~~- 
+-~~* idx - 고유값~~-
+-~~* RankStartDay - 시즌 시작일 (YYYY/MM/DD hh:mm:ss)~~-
+-~~* RankTermDay - 시즌텀(일)~~-
+
+---
+7. **ST_TinygramReward**
+    * idx - int -고유값
+    * RewardGroup - int - 보상 그룹(실질적 IDX)
+    * RewardType - int - 재화/아이템타입
+( 1 = 유료다이아, 2 = 무료다이아, 3 = 유료뽑기티켓, 4 = 테마 유료뽑기티켓, 
+11 = 골드, 12 = 하트, 13 = 무료뽑기티켓, 14 = 광고스킵권, 50 = 친밀도재료, 
+101 = 스킨카드)
+    * RewardIdx - int - 지급 인덱스(타입 1~50은 ST_Item, 타입 101은 ST_Skin)
+    * RewardCnt - int - 지급 갯수
+    * Rate - int - 지급확률 (10000 = 100%)
+    * Sort - int - 정렬순서
+    * GetType - int - 보상 획득 타입 (1=갯수획득, 2=생산량회득)
+
+---
+8. **ST_Help** 
+	* Idx - int - 고유값
+	* Content - int - 컨텐츠분류 (1 = 타이니그램)
+	* Type - int - 문구타입 ( 0 = 타이틀, 1 = 부재, 2 = 설명)
+	* String - int - 스트링 키값(랭팩)
+	* Sort - int - 정렬 순서
+---
+
+**기획서 버전1.0에서 삭제**
+~~8. **ST_RankReward** (랭킹 보상 그룹)~~
+    ~~* idx - int - 고유값~~
+    ~~* RewardGroup - int - 보상그룹~~
+    ~~* RewardType - 재화/아이템타입~~ 
+    ~~( 1 = 유료다이아, 2 = 무료다이아, 3 = 유료뽑기티켓, 4 = 테마 유료뽑기티켓,~~ 
+          ~~11 = 골드, 12 = 하트, 13 = 무료뽑기티켓, 14 = 광고 스킵권, 50 = 친밀도재료,~~ 
+          ~~101 = 스킨카드)~~
+    ~~* RewardIdx - 지급 인덱스(타입 1~50은 ST_Item, 타입 101은 ST_Skin)~~
+    ~~* RewardCnt - 지급 갯수~~
+    ~~* Rate - 지급확률(10000 = 100%)~~
+    ~~* Sort - 정렬순서~~
+    ~~* GetType - 보상 획득 타입 (1=갯수획득, 2=생산량회득)~~
+---
+9. **ST_Define** 
+    * MAX_GIFTING_HAVE_COUNT = 선물 횟수 최대 충전량
+    * MAX_GIFT_HAVE_COUNT = 선물 최대 보유량
+    * RANDOM_MESSAGE_TIME01 = 오전 랜덤 메시지 발신 타임01 (9시)
+    * RANDOM_MESSAGE_TIME02 = 저녁 랜덤 메시지 발신 타임02 (20시)
+    * RANK_SEASON_DAY = 시즌 시작 요일 (0 = 일요일, 1 = 월요일, 2 = 화요일…)
+    * IMAGE_UPLOAD_DATE = 이미지 업로드 기한 (단위:일)
+    * RANK_CHECK_TIME = 랭크 집계 시간 (단위:분)
+    * GAME_RESET_TIME =  갱신 타임 
+---
+
+
+
+<br><br>
+❗️ **갤러리 업로드 기능**  추후 확인 필요 
